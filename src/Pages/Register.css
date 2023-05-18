@@ -1,0 +1,93 @@
+.loginPage{
+    position: relative;
+     width: 100vw;
+     height: 100vh;
+     background: linear-gradient(to right, rgba(0,168,255,0.5), rgba(185,0,255,0.5));
+ }
+ .signINcontainer{
+     width: 400px;
+     height: 700px;
+     background-color: #fafafa;
+     border-radius: 10px;
+     margin-top: 10px;
+    
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ .cardTitle{
+     margin-top:10px;
+     font-size:30px;
+     font-weight: bold;
+     color: #4b2354;
+ }
+ .input{
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     width: 300px;
+     height: 50px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     padding: 5px;
+     border: 0px solid #ffffff;
+     border-radius: 20px;
+     text-align: center;
+     outline: none;
+     text-align: left;
+     padding-left:20px;
+     font-weight: bolder;
+   }
+   .input-field::placeholder {
+     color: #4b2354;
+    
+   }
+ .button {
+     background-color: #bd59d4;
+     color: #ffffff;
+     font-weight: bold;
+     margin-top: 20px;
+     margin-left:120px;
+     margin-right: 120px;
+     padding: 15px;
+     font-size: small;
+     border-radius: 30px;
+     
+     box-shadow: 0px 10px 10px 5px rgba(152, 61, 137, 0.145);
+ }
+ .button:hover{
+ background-color:#4b2354;
+ cursor: pointer;
+ }
+ .optionsText{
+     color: rgb(161, 161, 161);
+     margin-top: 55px;
+ }
+ .options{
+    
+     display: flex;
+   justify-content: center;
+ 
+ }
+ .option{
+     width: 50px;
+     aspect-ratio: 1;
+     background-color: #ffffff;
+     margin: 10px;
+     border-radius: 500px;
+     
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+ .icon{
+     width: 15px;
+     margin-top:10px ;
+ }
+ .icon2{
+     width: 30px;
+     margin-top:10px ;
+ }
+ .signUp{
+     margin-top: 15px;
+     color: #4b2354;
+     font-size: 15px;
+ }

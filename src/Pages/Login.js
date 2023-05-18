@@ -1,28 +1,29 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import axios from "axios";
+import { Authenticate } from "../API/Handler/AuthHandler";
+import { useNavigate } from 'react-router-dom';
+
+
+
 function SignInScreen() {
-  const [inputs, setInputs] = useState({
+
+  const navigate = useNavigate();
+
+
+
+  const [formValue, setformValue] = useState({
     email: "",
     password: "",
   });
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(inputs);
-    try {
-      const res = await axios.post(
-        process.env.AUTH_ENDPOINT,
-        inputs
-      );
-      console.log(res.data);
-    } catch (err) {
-      console.log(err);
-    }
+    Authenticate(formValue,navigate)
+
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInputs((prevState) => ({
+    setformValue((prevState) => ({
       ...prevState,
       [name]: value,
     }));
@@ -62,7 +63,7 @@ function SignInScreen() {
             variant="outlined"
             placeholder="Email"
             name="email"
-            value={inputs.email}
+            value={formValue.email}
             onChange={handleChange}
             required
           />
@@ -73,7 +74,7 @@ function SignInScreen() {
             variant="outlined"
             placeholder="password"
             name="password"
-            value={inputs.password}
+            value={formValue.password}
             required
           />
           <Button
